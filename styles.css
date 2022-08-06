@@ -1,7 +1,13 @@
 body {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     width: 1600px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
 }
+
+/* MAIN PAGE */
 
 /* HEADER */
 
@@ -9,14 +15,13 @@ header {
     height: 80px;
     background: #fff;
     display: flex;
+    
 }
 
 .logo {
     font-family: 'Raleway';
-    font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 31px; 
+    font-size: 26px; 
     letter-spacing: 0.03em;  
     color: #2196F3;  
     text-decoration: none;
@@ -53,11 +58,7 @@ header a:hover {
 }
 
 .menu li {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
 }
 
@@ -78,22 +79,24 @@ nav {
 }
 
 header ul {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.02em;
 }
 
-.email-link-header {
+.email-img {
     margin-left: 345px;
     padding-left: 0px;
-    color: #757575;
+    padding-right: 5px;
 }
 
+.tel-img {
+    padding-left: 30px;
+    padding-right: 5px;
+}
+
+.email-link-header,
 .tel-link-header {
-    padding-left: 50px;
     color: #757575;
 }
 
@@ -104,16 +107,18 @@ header ul {
     background-color: #2F303A;
 }
 
+button {
+    cursor: pointer;
+}
+
 h1 {
     position: absolute;
     width: 696px;
     height: 120px;
     margin: 200px 450px 280px 450px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 900;
     font-size: 44px;
-    line-height: 60px;
+    line-height: 136%;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -128,12 +133,9 @@ h1 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #fff;
-    font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 30px;
-        letter-spacing: 00.06em;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 00.06em;
 }
 
 /* FEATURES */
@@ -156,22 +158,16 @@ ul {
 
 .features-list li {
     margin-right: 30px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 171%;
     letter-spacing: 0.03em;
     color: #757575;
 }
 
 .features-list li h3 {
     margin-bottom: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #212121;
@@ -187,14 +183,10 @@ ul {
 }
 
 .images h2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 100%;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
     margin-bottom: 50px;
 }
 
@@ -217,14 +209,10 @@ ul {
 }
 
 .team h2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 100%;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
     padding-top: 95px;
 }
 
@@ -244,23 +232,18 @@ ul {
 
 .team-member h3 {
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 100%;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
     margin-bottom: 0px;
     margin-top: 30px;
 }
 
 .team-member p {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 100%;
     text-align: center;
     letter-spacing: 0.03em;
     color: #757575;
@@ -289,11 +272,9 @@ address a {
 
 .address-links{
     margin-top: 20px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    font-style: normal;
+    line-height: 171%;
     letter-spacing: 0.03em;
     padding-left: 0px;
     margin-left: 215px;
@@ -312,4 +293,71 @@ address a {
 .email-link-footer,
 .tel-link-footer {
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* PORTFOLIO SECTION */
+
+.portfolio {
+    margin: 95px 200px 80px 200px;
+}
+
+.menu-buttons {
+    display: flex;
+    padding-bottom: 15px;
+    margin-left: 310px;
+    border-style: none;
+    margin-top: 0px;
+    padding-left: 0px;
+    
+}
+
+.menu-buttons button {
+    margin-right: 8px;
+    padding: 6px 22px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    border-style: none;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.menu-buttons button:hover {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.portfolio-projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1210px;
+    padding: 0px;
+}
+
+.portfolio-project {
+    width: 370px;
+    height: 405px;
+    border: 1px solid #EEEEEE;
+    border-top: 0px;
+    margin: 15px;
+    
+}
+
+.portfolio-project h3 {
+    font-size: 18px;
+    line-height: 200%;
+    width: 320px;
+    letter-spacing: 0.06em;
+    margin: 20px 25px 5px 25px;
+}
+
+.portfolio-project p {
+    margin: 0px 25px 20px 25px;
+    font-size: 16px;
+    line-height: 188%;
+    letter-spacing: 0.03em;
+    color: #757575;
 }
