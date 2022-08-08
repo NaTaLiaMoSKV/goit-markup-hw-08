@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    /* margin-bottom: -14px; */
+    background-color: #FFFFFF;
     padding: 0px;
     width: 1600px;
     font-family: 'Raleway', sans-serif;
@@ -353,7 +353,7 @@ address a {
     
 }
 
-.portfolio-project h3 {
+.portfolio-project h2 {
     font-size: 18px;
     line-height: 200%;
     width: 320px;
