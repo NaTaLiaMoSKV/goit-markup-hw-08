@@ -1,10 +1,13 @@
-body {
+:root {
     --white-color: #FFFFFF;
     --main-content-color: #212121;
     --blue-color: #2196F3;
     --gray-content-color: #757575;
     --banner-background-color: #2F303A;
     --team-card-background-color: #F5F4FA;
+}
+
+body {
     padding: 0px;
     width: 1600px;
     font-size: 14px;
