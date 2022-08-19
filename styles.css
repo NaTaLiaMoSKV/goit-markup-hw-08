@@ -9,14 +9,14 @@
 
 body {
     padding: 0px;
-    width: 1600px;
     font-size: 14px;
     letter-spacing: 0.03em;
     font-family: 'Roboto', sans-serif;
 }
 
 .container {
-    width: 1600px;
+    width: 1200px;
+    padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,8 +25,9 @@ body {
 
 /* HEADER */
 
-header {
+header .container{
     align-items: center;
+    display: flex;
 }
 
 .logo {
@@ -37,7 +38,7 @@ header {
 }
 
 #logo-header {
-    margin: 25px 95px 25px 215px;
+    margin: 25px 95px 25px 0;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -45,6 +46,7 @@ span.studio-header {
     color: #000;
 }
 
+.header-links,
 .navigation-menu {
     display: flex;
 }
@@ -70,22 +72,13 @@ header a:hover {
     color: var(--main-content-color);
 }
 
-.menu li:not(:last-child) {
+.menu li:not(:last-child),
+.email-link-header {
     margin-right: 50px;
 }
 
 .header-links {
-    margin-left: 345px;
-}
-
-.email-img {
-    margin-right: 10px;
-}
-
-.tel-img {
-    margin-left: 30px;
-    margin-right: 10px;
-    vertical-align: middle;
+    margin-left: auto;
 }
 
 .email-link-header,
@@ -93,23 +86,21 @@ header a:hover {
     color: var(--gray-content-color);
 }
 
-/* BANNER */
+/* HERO */
 
-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.banner {
+.hero {
     background-color: var(--banner-background-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 
 .main-title {
+    margin: 0 auto 30px;
     width: 696px;
-    margin: 105px 450px 30px;
     font-weight: 900;
     font-size: 44px;
-    line-height: 136%;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -121,7 +112,6 @@ button {
 }
 
 .order-button {
-    margin: auto 690px 105px;
     padding: 10px 32px;
     background: var(--blue-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -130,11 +120,16 @@ button {
     color: var(--white-color);
     font-weight: 700;
     font-size: 16px;
-    line-height: 188%;
+    line-height: 1.88;
     letter-spacing: 0.06em;
 }
 
 /* FEATURES */
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 ul {
     list-style-type: none;
@@ -142,10 +137,8 @@ ul {
 }
 
 .features {
-    width: 1170px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 0px;
 }
 
 .features-list {
@@ -177,7 +170,7 @@ ul {
 /* IMAGES */
 
 .images {
-    width: 1170px;
+    padding-top: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -190,10 +183,16 @@ ul {
     margin-top: 0;
 }
 
-.images > ul {
+.images-list {
     padding: 0px;
     display: flex;
     justify-content: space-between;
+}
+
+.image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* TEAM */
@@ -206,20 +205,20 @@ ul {
     line-height: 117%;
     text-align: center;
     margin: 0;
+    margin-bottom: 50px;
 }
 
 .team-members {
     display: flex;
-    justify-content: space-between;
-    margin: 50px 215px 0;
     padding: 0;
 }
 
-.team-member {
+.team-member:not(:last-child) {
     width: 270px;
     background: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    margin-right: 30px;
 }
 
 .team-member h3 {
@@ -243,11 +242,7 @@ ul {
 footer {
     background: var(--banner-background-color);
     padding-top: 60px;
-    margin-bottom: 0px;
-}
-
-#logo-footer {
-    margin-left: 215px;
+    padding-bottom: 60px;
 }
 
 .studio-footer {
@@ -255,12 +250,10 @@ footer {
 }
 
 .address-links{
+    padding: 0px;
     font-style: normal;
     line-height: 171%;
-    margin-left: 215px;
     margin-top: 20px;
-    padding-bottom: 60px;
-    padding-left: 0px;
 }
 
 .address-links li:nth-child(2) {
@@ -284,7 +277,6 @@ footer {
 }
 
 .portfolio {
-    width: 1170px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -316,31 +308,34 @@ footer {
 .portfolio-projects {
     display: flex;
     flex-wrap: wrap;
-    width: 1170px;
     padding: 0px;
     justify-content: space-between;
 }
 
 .portfolio-project {
     width: 370px;
-    border: 1px solid #EEEEEE;
-    border-top: 0px;
 }
 
 .portfolio-project:nth-child(n+4) {
     margin-top: 30px;
 }
 
+.portfolio-project-description {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: 0px;
+}
+
 .portfolio-project h2 {
     font-size: 18px;
     line-height: 200%;
-    width: 320px;
+    margin: 0;
+    margin-bottom: 4px;
     letter-spacing: 0.06em;
-    margin: 20px 25px 5px;
 }
 
 .portfolio-project p {
-    margin: 5px 25px 20px;
+    margin: 0;
     font-size: 16px;
     line-height: 188%;
     color: var(--gray-content-color);
