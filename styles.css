@@ -378,7 +378,7 @@ address {
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--white-color); 
 }
 
 .icons-list {
