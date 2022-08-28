@@ -6,6 +6,11 @@
     --banner-background-color: #2F303A;
     --logo-icon-color: #afb1b8;
     --light-gray-color: #F5F4FA;
+    --black-color: #000;
+    --header-border-color: #ECECEC;
+    --portfolio-border-color: #EEEEEE;
+
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -44,7 +49,21 @@ header .container{
 }
 
 span.studio-header {
-    color: #000;
+    color: var(--black-color);
+}
+
+.current-page {
+    position: relative;
+}
+
+.current-page::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid var(--blue-color);
+    top: 100%;
+    margin-top: 28px;
 }
 
 .header-links,
@@ -63,6 +82,7 @@ span.studio-header {
 
 a {
     text-decoration: none;
+    transition: color 250ms var(--timing-function);
 }
 
 .icon-envelope,
@@ -73,7 +93,6 @@ a {
 
 header a:hover {
     color: var(--blue-color);
-    fill: var(--blue-color);
 }
 
 .menu a {
@@ -218,10 +237,32 @@ ul {
     justify-content: space-between;
 }
 
-img {
+
+.features-img {
     display: block;
     max-width: 100%;
-    height: auto;
+}
+
+.images-list li {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.images-description {
+    position: absolute;
+    padding-top: 27px;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color:rgba(47, 48, 58, 0.8);
 }
 
 /* TEAM */
@@ -287,12 +328,13 @@ img {
     width: 100%;
     height: 100%;
     fill: var(--logo-icon-color);
+    border-radius: 50%;
+    transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .team-icon-network:hover {
     fill: var(--white-color);
-    background-color: #2196F3;
-    border-radius: 50%;
+    background-color: var(--blue-color);
 }
 
 /* CLIENTS */
@@ -320,6 +362,7 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .clients-list li:hover {
@@ -394,6 +437,7 @@ address {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+    transition: background-color 250ms var(--timing-function);
 }
 
 .footer-icon-network {
@@ -407,11 +451,58 @@ address {
     background-color: var(--blue-color);
 }
 
+/* MODAL WINDOW */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--white-color);
+    transform-origin: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms var(--timing-function);
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+}
 
 /* PORTFOLIO SECTION */
 
 .portfolio-header {
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid var(--header-border-color);
 }
 
 .portfolio {
@@ -436,6 +527,9 @@ address {
     line-height: 162%;
     text-align: center;
     font-weight: 500;
+    transition: background-color 250ms var(--timing-function), 
+        color 250ms var(--timing-function), 
+        box-shadow 250ms var(--timing-function);
 } 
 
 .menu-buttons button:hover,
@@ -459,6 +553,7 @@ address {
 .portfolio-project-link {
     color: var(--main-content-color);
     display: block;
+    transition: box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-project-link:hover {
@@ -471,7 +566,7 @@ address {
 
 .portfolio-project-description {
     padding: 20px 24px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid var(--portfolio-border-color);
     border-top: 0px;
 }
 
@@ -483,9 +578,39 @@ address {
     letter-spacing: 0.06em;
 }
 
-.portfolio-project p {
+.portfolio-project-description p {
     margin: 0;
     font-size: 16px;
     line-height: 188%;
     color: var(--gray-content-color);
 }
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-project-link:hover .overlay {
+    transform: translateY(0);
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--blue-color);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+}
+
+.overlay-text {
+    margin: 0;
+    padding: 65px 25px;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--white-color);
+} 

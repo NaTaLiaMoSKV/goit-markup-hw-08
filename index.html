@@ -23,7 +23,7 @@
             <nav class="navigation-menu">
                 <a class="logo" id="logo-header" href="#">Web<span class="studio-header">Studio</span></a>
                 <ul class="menu">
-                    <li><a style="color:#2196F3;" href="#">Студія</a></li>
+                    <li><a class="current-page" style="color:#2196F3;" href="#">Студія</a></li>
                     <li><a href="./portfolio.html" rel="noopener noreferrer nofollow">Портфоліо</a></li>
                     <li><a href="#">Контакти</a></li>
                 </ul>
@@ -54,7 +54,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="order-button" type="button">Замовити послугу</button>
+                <button data-modal-open class="order-button" type="button">Замовити послугу</button>
             </div>
          </section>
         
@@ -108,9 +108,18 @@
             <div class="container">
                 <h2>Чим ми займаємося</h2>
                 <ul class="images-list">
-                    <li><img src="images/1.jpg" alt="Чоловік пише код на комп'ютері" width="370"></li>
-                    <li><img src="images/2.jpg" alt="Чоловік тримає телефон" width="370"></li>
-                    <li><img src="images/3.jpg" alt="Чоловік малює на планшеті" width="370"></li>
+                    <li>
+                        <img class="features-img" src="images/1.jpg" alt="Чоловік пише код на комп'ютері" width="370">
+                        <p class="images-description">Десктопні додатки</p>
+                    </li>
+                    <li>
+                        <img class="features-img" src="images/2.jpg" alt="Чоловік тримає телефон" width="370">
+                        <p class="images-description">Мобільні додатки</p>
+                    </li>
+                    <li>
+                        <img class="features-img" src="images/3.jpg" alt="Чоловік малює на планшеті" width="370">
+                        <p class="images-description">Дизайнерські рішення</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -315,5 +324,13 @@
         </div>
     </footer>
     
+    <!-- MODAL WINDOW -->
+
+    <div data-modal class="backdrop is-hidden">
+        <div class="modal">
+            <button class="modal-close-button" type="button" data-modal-close>&#10006;</button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
