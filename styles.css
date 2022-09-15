@@ -1,23 +1,8 @@
-:root {
-    --white-color: #FFFFFF;
-    --main-content-color: #212121;
-    --blue-color: #2196F3;
-    --gray-content-color: #757575;
-    --banner-background-color: #2F303A;
-    --logo-icon-color: #afb1b8;
-    --light-gray-color: #F5F4FA;
-    --black-color: #000;
-    --header-border-color: #ECECEC;
-    --portfolio-border-color: #EEEEEE;
 
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-body {
-    padding: 0px;
-    font-size: 14px;
-    letter-spacing: 0.03em;
-    font-family: 'Roboto', sans-serif;
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .container {
@@ -80,11 +65,6 @@ span.studio-header {
     letter-spacing: 0.02em;
 }
 
-a {
-    text-decoration: none;
-    transition: color 250ms var(--timing-function);
-}
-
 .icon-envelope,
 .icon-smartphone {
     fill: currentColor;
@@ -144,10 +124,6 @@ header a:hover {
     color: var(--white-color);
 }
 
-button {
-    cursor: pointer;
-}
-
 .order-button {
     padding: 10px 32px;
     background: var(--blue-color);
@@ -162,17 +138,6 @@ button {
 }
 
 /* FEATURES */
-
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 .features {
     margin-left: auto;
@@ -203,17 +168,12 @@ ul {
 }
 
 .feature-list-item h3 {
-    margin: 0;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 115%;
     text-transform: uppercase;
     color: var(--main-content-color);
-}
-
-.feature-list-item p {
-    margin: 0;
 }
 
 /* IMAGES */
@@ -229,7 +189,6 @@ ul {
     line-height: 117%;
     text-align: center;
     margin-bottom: 50px;
-    margin-top: 0;
 }
 
 .images-list {
@@ -276,7 +235,6 @@ ul {
     font-size: 36px;
     line-height: 117%;
     text-align: center;
-    margin: 0;
     margin-bottom: 50px;
 }
 
@@ -297,12 +255,11 @@ ul {
     margin-right: 0;
 }
 
-.team-member h3 {
+.team-member-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
     text-align: center;
-    margin-bottom: 0px;
     margin: 30px auto 10px;
 }
 
@@ -345,7 +302,6 @@ ul {
     font-size: 36px;
     line-height: 117%;
     text-align: center;
-    margin: 0;
     margin-bottom: 50px;
 }
 
@@ -455,7 +411,6 @@ address {
 
 .footer-newsletter {
     margin-left: auto;
-
 }
 
 .footer-form {
@@ -762,13 +717,11 @@ address {
 .portfolio-project h2 {
     font-size: 18px;
     line-height: 200%;
-    margin: 0;
     margin-bottom: 4px;
     letter-spacing: 0.06em;
 }
 
 .portfolio-project-description p {
-    margin: 0;
     font-size: 16px;
     line-height: 188%;
     color: var(--gray-content-color);

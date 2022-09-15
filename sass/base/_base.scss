@@ -1,0 +1,27 @@
+body {
+    padding: 0px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: color 250ms var(--timing-function);
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
