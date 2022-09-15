@@ -1,0 +1,71 @@
+header .container {
+    align-items: center;
+    display: flex;
+}
+
+header.portfolio-header {
+    border-bottom: 1px solid var(--header-border-color);
+}
+
+header a:hover {
+    color: var(--blue-color);
+}
+
+.current-page {
+    position: relative;
+}
+
+.current-page::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid var(--blue-color);
+    top: 100%;
+    margin-top: 28px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu-list {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.nav-menu-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav-menu-list a {
+    color: var(--main-content-color);
+}
+
+
+.contacts-list {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-left: auto;
+}
+
+.contacts-item .email-link {
+    margin-right: 50px;
+}
+
+.icon-envelope,
+.icon-smartphone {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.contacts-item a {
+    color: var(--gray-content-color);
+    display: flex;
+    align-items: center;
+}
