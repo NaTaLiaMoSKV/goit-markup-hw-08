@@ -12,12 +12,11 @@
     border-radius: 4px;
 }
 
-.modal-close-button {
+.modal-window__button {
     position: absolute;
     right: 8px;
     top: 8px;
-    width: 30px;
-    height: 30px;
+    @include width-height(30px, 30px);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -26,12 +25,13 @@
     background-color: var(--white-color);
 }
 
-.icon-close {
+.modal-window__icon {
     height: 100%;
     transition: fill 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        fill: var(--blue-color);
+    }
 }
 
-.icon-close:hover,
-.icon-close:focus {
-    fill: var(--blue-color);
-}

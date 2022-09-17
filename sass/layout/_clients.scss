@@ -1,23 +1,19 @@
-.clients-list {
+.clients__list {
     display: flex;
     justify-content: space-between;
     padding: 0;
 }
 
-.clients-list-item {
+.clients__item {
     fill: var(--logo-icon-color);
     border: 1px solid var(--logo-icon-color);
-    width: 170px;
-    height: 92px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include width-height(170px, 92px);
+    @extend %flex-center;
     border-radius: 4px;
     transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
-}
 
-.clients-list-item:hover {
-    border-color: var(--blue-color);
-    fill: var(--blue-color);
-
+    &:hover {
+        border-color: var(--blue-color);
+        fill: var(--blue-color);
+    }
 }
