@@ -2,6 +2,11 @@
     padding-top: 0;
     @extend %margin-center;
 }
+    @media screen and (max-width: 1199px) {
+        .images {
+            display: none;
+        }
+    }
 
 .images__list {
     padding: 0px;

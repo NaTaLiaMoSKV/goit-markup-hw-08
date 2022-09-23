@@ -21,7 +21,7 @@
 
     <!-- HEADER -->
     <header class="page-header portfolio-header">
-        <div class="container">
+        <div class="container page-header__container">
             <nav class="nav-menu">
                 <a class="logo nav-menu__logo" href="#">Web<span class="logo_theme_dark">Studio</span></a>
                 <ul class="nav-menu__list">
@@ -33,7 +33,7 @@
             <ul class="contacts contacts__list">
                 <li class="contacts__item">
                     <a class="contacts__email-link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon-envelope" width="16" height="12">
+                        <svg class="contacts__icon-envelope" width="14" height="10">
                             <use href="./images/symbol-defs.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
@@ -41,20 +41,51 @@
                 </li>
                 <li class="contacts__item">
                     <a class="contacts__tel-link" href="tel:+380961111111">
-                        <svg class="contacts__icon-smartphone" width="10" height="16">
+                        <svg class="contacts__icon-smartphone" width="10" height="14">
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg>
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="open-mobile-menu-btn" data-menu-open>
+                <svg class="open-mobile-menu-btn__icon">
+                    <use href="./images/symbol-defs.svg#icon-burger"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon">
+                        <use href="./images/symbol-defs.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-menu__item"><a href="./index.html" rel="noopener noreferrer nofollow">Студія</a></li>
+                    <li class="mobile-nav-menu__item"><a style="color:#2196F3;" href="#">Портфоліо</a></li>
+                    <li class="mobile-nav-menu__item"><a href="#">Контакти</a></li>
+                </ul>
+                <a class="mobile-menu__tel-link" href="tel:+380961111111">
+                    +38 096 111 11 11
+                </a>
+                <a class="mobile-menu__email-link" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                </a>
+                <ul class="mobile-menu-networks">
+                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Instagram</a></li>
+                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Twitter</a></li>
+                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Facebook</a></li>
+                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Linkedin</a></li>
+                </ul>
+            </div>
         </div>
     </header>
               
      <!-- MAIN -->
     <main>
-        <div class="container">
+        <div class="portfolio container ">
             <!-- PORTFOLIO -->
-            <section class="portfolio section">
+            <section class="section portfolio__section">
                 <h1 hidden>Portfolio</h1>
                 <ul class="menu-buttons menu-buttons_portfolio">
                     <li class="menu-buttons__item"><button class="menu-buttons__button" type="button">Усі</button></li>
@@ -67,8 +98,17 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/technoquack1.jpg" alt="Комп'ютер з відкритим веб-сайтом" width="370"
-                                    height="294"> 
+                                <picture>
+                                    <source srcset="./images/portfolio-img1-desktop.jpg 1x, ./images/portfolio-img1-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img1-tablet.jpg 1x, ./images/portfolio-img1-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img1-mobile.jpg 1x, ./images/portfolio-img1-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img1-mobile.jpg"
+                                        alt="Комп'ютер з відкритим веб-сайтом" width="370" height="294">
+                                </picture>
+                                
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -87,8 +127,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/poster2.jpg" alt="Постер з баскетболистом"
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img2-desktop.jpg 1x, ./images/portfolio-img2-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img2-tablet.jpg 1x, ./images/portfolio-img2-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img2-mobile.jpg 1x, ./images/portfolio-img2-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img2-mobile.jpg" alt="Постер з баскетболистом">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -106,8 +153,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/seafood3.jpg" alt="Напис 'The Seafood Restaurant'" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img3-desktop.jpg 1x, ./images/portfolio-img3-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img3-tablet.jpg 1x, ./images/portfolio-img3-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img3-mobile.jpg 1x, ./images/portfolio-img3-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img3-mobile.jpg" alt="Напис 'The Seafood Restaurant'">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -125,8 +179,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/prime4.jpg" alt="Навушники на білому фоні" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img4-desktop.jpg 1x, ./images/portfolio-img4-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img4-tablet.jpg 1x, ./images/portfolio-img4-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img4-mobile.jpg 1x, ./images/portfolio-img4-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img4-mobile.jpg" alt="Навушники на білому фоні">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -144,8 +205,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/boxes5.jpg" alt="Дві коробки на білому фоні" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img5-desktop.jpg 1x, ./images/portfolio-img5-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img5-tablet.jpg 1x, ./images/portfolio-img5-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img5-mobile.jpg 1x, ./images/portfolio-img5-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img5-mobile.jpg" alt="Дві коробки на білому фоні">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -163,8 +231,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/inspiration6.jpg" alt="Монітор комп'ютера з вікритим веб-сайтом" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img6-desktop.jpg 1x, ./images/portfolio-img6-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img6-tablet.jpg 1x, ./images/portfolio-img6-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img6-mobile.jpg 1x, ./images/portfolio-img6-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img6-mobile.jpg" alt="Монітор комп'ютера з вікритим веб-сайтом">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -175,15 +250,22 @@
                             </div>
                             <div class="portfolio-project__description-section">
                                 <h2 class="portfolio-project__name">Inspiration has no Borders</h2>
-                                <p class="portfolio-project__description">Веб-сайт</p>>
+                                <p class="portfolio-project__description">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/limited7.jpg" alt="Відкрита книга на білому фоні" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img7-desktop.jpg 1x, ./images/portfolio-img7-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img7-tablet.jpg 1x, ./images/portfolio-img7-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img7-mobile.jpg 1x, ./images/portfolio-img7-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img7-mobile.jpg" alt="Відкрита книга на білому фоні">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -201,8 +283,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/lab8.jpg" alt="Етикетка магазину 'LAB'" 
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img8-desktop.jpg 1x, ./images/portfolio-img8-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img8-tablet.jpg 1x, ./images/portfolio-img8-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img8-mobile.jpg 1x, ./images/portfolio-img8-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img8-mobile.jpg" alt="Етикетка магазину 'LAB'">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -220,8 +309,15 @@
                     <li class="portfolio-project__item">
                         <a class="portfolio-project__link" href="#">
                             <div class="portfolio-project__image-section">
-                                <img class="portfolio-project__img" src="./images/business9.jpg" alt="Чоловік працює за комп'ютером"
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio-img9-desktop.jpg 1x, ./images/portfolio-img9-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio-img9-tablet.jpg 1x, ./images/portfolio-img9-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio-img9-mobile.jpg 1x, ./images/portfolio-img9-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img class="portfolio-project__img" src="./images/portfolio-img9-mobile.jpg" alt="Чоловік працює за комп'ютером">
+                                </picture>
                                 <div class="portfolio-project__overlay-section">
                                     <p class="portfolio-project__overlay-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -243,13 +339,14 @@
         
     <!-- FOOTER -->
     <footer>
-        <div class="container">
+        <div class="container footer__container">
             <div class="address">
                 <a class="logo" href="#">Web<span class="logo_theme_light">Studio</span></a>
                 <address class="address__section">
                     <ul class="address__list">
-                        <li class="address__item"><a class="address__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                                target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a></li>
+                        <li class="address__item"><a class="address__link_white-color"
+                                href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
+                                rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a></li>
                         <li class="address__item"><a class="address__link"
                                 href="mailto:info@example.com">info@example.com</a></li>
                         <li class="address__item"><a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
@@ -298,5 +395,6 @@
         </div>
     </footer>
     
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

@@ -1,14 +1,5 @@
-.portfolio {
-    @extend %margin-center;
-}
-
 .menu-buttons {
     display: flex;
-    justify-content: center;
-}
-
-.menu-buttons_portfolio {
-    margin-bottom: 50px;
 }
 
 .menu-buttons__button {
@@ -28,21 +19,6 @@
         background-color: var(--blue-color);
         color: var(--white-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
-}
-
-.portfolio-project {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0px;
-    justify-content: space-between;
-}
-
-.portfolio-project__item {
-    @include width-height(370px);
-
-    &:nth-child(n+4) {
-        margin-top: 30px;
     }
 }
 
@@ -99,4 +75,77 @@
 .portfolio-project__description {
     @include font(16px, 400, 1.88);
     color: var(--gray-content-color);
+}
+
+@media screen and (max-width:767px) {
+    .menu-buttons {
+        width: 334px;
+        flex-wrap: wrap;
+        height: 91px;
+        align-items: flex-end;
+    }
+
+    .menu-buttons_portfolio {
+        margin-bottom: 40px;
+    }
+
+    .portfolio-project__item {
+        @include width-height(450px);
+
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+    
+    .portfolio-project__img {
+        width: 450px;
+        height: 294px;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .menu-buttons {
+        justify-content: center;
+    }
+
+    .menu-buttons_portfolio {
+        margin-bottom: 30px;
+    }
+
+    .portfolio-project {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        justify-content: space-between;
+
+    }
+
+    .portfolio-project__item {
+        @include width-height(354px);
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+}
+
+    .portfolio-project__img {
+        width: 354px;
+        height: 294px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .menu-buttons_portfolio {
+        margin-bottom: 50px;
+    }
+
+    .portfolio-project__item {
+        @include width-height(370px);
+
+        &:nth-child(n+4) {
+            margin-top: 30px;
+        }
+    }
 }

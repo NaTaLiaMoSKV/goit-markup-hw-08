@@ -1,13 +1,14 @@
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
 }
-
 .clients__item {
+    margin-bottom: 30px;
     fill: var(--logo-icon-color);
     border: 1px solid var(--logo-icon-color);
-    @include width-height(170px, 92px);
+    @include width-height(210px, 92px);
     @extend %flex-center;
     border-radius: 4px;
     transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function);
@@ -15,5 +16,20 @@
     &:hover {
         border-color: var(--blue-color);
         fill: var(--blue-color);
+    }
+    &:nth-child(5), &:nth-child(6) {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .clients__item {
+        @include width-height(226px, 92px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .clients__item {
+        @include width-height(170px, 92px);
     }
 }

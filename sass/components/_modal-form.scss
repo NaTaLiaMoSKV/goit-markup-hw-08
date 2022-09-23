@@ -1,5 +1,5 @@
 .modal-form {
-    width: 448px;
+    width: 370px;
 }
 
 .modal-form__head {
@@ -63,6 +63,7 @@
 }
 
 .modal-form__checkbox-label {
+    font-size: 12px;
     margin-top: 20px;
     @extend %flex-center;
     color: var(--gray-content-color);
@@ -112,6 +113,16 @@
     &:hover,
     &:focus {
         background-color: #188CE8;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .modal-form {
+        width: 448px;
+    }
+
+    .modal-form__checkbox-label {
+        font-size: 12px;
     }
 }
 
