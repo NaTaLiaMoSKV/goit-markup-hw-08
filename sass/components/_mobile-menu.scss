@@ -15,11 +15,11 @@
         visibility 250ms --timing-function;
 }
 
-// .mobile-menu.is-open {
-//     opacity: 1;
-//     visibility: visible;
-//     pointer-events: auto;
-// }
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 .mobile-menu__container {
     position: relative;

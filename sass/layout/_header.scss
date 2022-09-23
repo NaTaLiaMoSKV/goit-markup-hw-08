@@ -46,7 +46,7 @@
 @media screen and (min-width: 768px) {
 
     .page-header {
-        height: 60px;
+        height: 80px;
     }
 
     .open-mobile-menu-btn {
@@ -68,11 +68,13 @@
 
     .nav-menu__logo {
         margin-right: 85px;
+        margin-top: 26px;
     }
 
     .nav-menu__list {
         display: flex;
         align-items: center;
+        margin-top: 28px;
         padding: 0px;
         @include font($fw:500, $ls:0.02em);
     }
@@ -128,8 +130,22 @@
 }
 
 @media screen and (min-width:768px) and (max-width: 1199px) {
-    .contacts__item:not(:last-child) {
-        margin-bottom: 10px;
+
+    .nav-menu__list {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .contacts__item {
+        &:last-child {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        &:not(:last-child) {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
     }
 }
 
@@ -146,6 +162,7 @@
     .contacts__list {
         display: flex;
         margin-left: auto;
+        margin-top: 21px;
     }
 
     .contacts__item {
