@@ -1173,6 +1173,15 @@ footer {
     height: 294px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-project__item:first-child {
+    height: 440px;
+  }
+  .portfolio-project__item:first-child .portfolio-project__description-section {
+    width: 354px;
+    height: 146px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .menu-buttons_portfolio {
     margin-bottom: 50px;

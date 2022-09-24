@@ -133,6 +133,19 @@
         width: 354px;
         height: 294px;
     }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .portfolio-project__item:first-child {
+        height: 440px;
+
+        & .portfolio-project__description-section {
+            @include width-height(354px, 146px);
+        }
+    }
+
+    
 }
 
 @media screen and (min-width:1200px) {
