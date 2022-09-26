@@ -2,11 +2,6 @@
     padding-top: 0;
     @extend %margin-center;
 }
-    @media screen and (max-width: 1199px) {
-        .images {
-            display: none;
-        }
-    }
 
 .images__list {
     padding: 0px;
@@ -35,4 +30,12 @@
     text-transform: uppercase;
     color: var(--white-color);
     background-color: rgba(47, 48, 58, 0.8);
+}
+
+@media screen and (max-width: 1199px) {
+
+    .images {
+        display: none;
+    }
+    
 }

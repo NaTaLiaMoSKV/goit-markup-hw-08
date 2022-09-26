@@ -26,7 +26,7 @@
                 <a class="logo nav-menu__logo" href="#">Web<span class="logo_theme_dark">Studio</span></a>
                 <ul class="nav-menu__list">
                     <li class="nav-menu__item"><a a href="./index.html" rel="noopener noreferrer nofollow">Студія</a></li>
-                    <li class="nav-menu__item"><a class="nav-menu__item_current" style="color:#2196F3;" href="#">Портфоліо</a></li>
+                    <li class="nav-menu__item"><a class="nav-menu__item_current-link" style="color:#2196F3;" href="#">Портфоліо</a></li>
                     <li class="nav-menu__item"><a href="#">Контакти</a></li>
                 </ul>
             </nav>
@@ -54,32 +54,41 @@
             </button>
         </div>
         <div class="mobile-menu js-menu-container">
-            <div class="container mobile-menu__container">
+            <div class="container mobile-menu__close-container">
                 <button class="mobile-menu__close-btn js-close-menu">
                     <svg class="mobile-menu__close-icon">
                         <use href="./images/symbol-defs.svg#icon-close"></use>
                     </svg>
                 </button>
+            </div>
+            <div class="container mobile-menu__container">
                 <ul class="mobile-nav-menu">
                     <li class="mobile-nav-menu__item"><a href="./index.html" rel="noopener noreferrer nofollow">Студія</a></li>
                     <li class="mobile-nav-menu__item"><a style="color:#2196F3;" href="#">Портфоліо</a></li>
                     <li class="mobile-nav-menu__item"><a href="#">Контакти</a></li>
                 </ul>
-                <a class="mobile-menu__tel-link" href="tel:+380961111111">
-                    +38 096 111 11 11
-                </a>
-                <a class="mobile-menu__email-link" href="mailto:info@devstudio.com">
-                    info@devstudio.com
-                </a>
-                <ul class="mobile-menu-networks">
-                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Instagram</a></li>
-                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Twitter</a></li>
-                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Facebook</a></li>
-                    <li class="mobile-menu-networks__item"><a href="#" class="mobile-menu-networks__link">Linkedin</a></li>
+                <ul class="mobile-menu__links">
+                    <li>
+                        <a class="mobile-menu__links-item_blue" href="tel:+380961111111">
+                            +38 096 111 11 11 </a>
+                    </li>
+                    <li>
+                        <a class="mobile-menu__links-item_gray" href="mailto:info@devstudio.com">
+                            info@devstudio.com </a>
+                    </li>
+        
+                    <ul class="mobile-menu__links-list">
+                        <li class="mobile-menu__links-item"><a href="#">Instagram</a></li>
+                        <li class="mobile-menu__links-item"><a href="#">Twitter</a></li>
+                        <li class="mobile-menu__links-item"><a href="#">Facebook</a></li>
+                        <li class="mobile-menu__links-item"><a href="#">Linkedin</a></li>
+                    </ul>
                 </ul>
             </div>
         </div>
     </header>
+
+    
               
      <!-- MAIN -->
     <main>
@@ -87,7 +96,7 @@
             <!-- PORTFOLIO -->
             <section class="section portfolio__section">
                 <h1 hidden>Portfolio</h1>
-                <ul class="menu-buttons menu-buttons_portfolio">
+                <ul class="menu-buttons__list">
                     <li class="menu-buttons__item"><button class="menu-buttons__button" type="button">Усі</button></li>
                     <li class="menu-buttons__item"><button class="menu-buttons__button" type="button">Веб-сайти</button></li>
                     <li class="menu-buttons__item"><button class="menu-buttons__button" type="button">Додатки</button></li>

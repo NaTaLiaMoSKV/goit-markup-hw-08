@@ -4,19 +4,19 @@
 
 .features__item {
     line-height: 171%;
-    width: 450px;
     color: var(--gray-content-color);
+
     &:not(:last-child) {
         margin-bottom: 30px;
     }
 }
 
 .features__icon {
-    background-color: var(--light-gray-color);
     @include width-height(100%, 120px);
     @extend %flex-center;
     margin-bottom: 30px;
     border-radius: 4px;
+    background-color: var(--light-gray-color);
 }
 
 .features__subtitle {
@@ -39,7 +39,16 @@
     border-radius: 4px;
 }
 
+@media screen and (min-width:480px) {
+
+    .features__item {
+        width: 450px;
+    }
+    
+}
+
 @media screen and (min-width:768px) {
+
     .features__list {
         display: flex;
         flex-wrap: wrap;
@@ -49,10 +58,13 @@
     .features__item {
         width: 354px;
     }
+
 }
 
 @media screen and (min-width:1200px) {
+
     .features__item {
         width: 270px;
     }
+
 }

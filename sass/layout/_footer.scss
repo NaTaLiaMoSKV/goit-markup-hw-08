@@ -1,25 +1,14 @@
 footer {
-    background: var(--banner-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+    background: var(--banner-background-color);
 }
 
-.address {
-    width: 250px;
-}
-
-.address__section {
-    @include width-height(230px);
-}
 
 .address__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin-top: 20px;
     font-style: normal;
     line-height: 171%;
-    margin-top: 20px;
 }
 
 .address__item {
@@ -48,12 +37,8 @@ footer {
     color: var(--white-color);
 }
 
-.newsletter {
-    margin-top: 60px;
-}
 
 .newsletter__input {
-    @include width-height(450px, 50px);
     @include font(16px, 400, 1.25);
     margin-bottom: 20px;
     padding-left: 15px;
@@ -76,77 +61,81 @@ footer {
     fill: var(--white-color);
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (min-width: 320px) {
+
     .address .logo {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .footer__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: baseline;
-    }
-
-    .icons {
-        width: 206px;
-        margin-top: 60px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
+    .address__list,
+    .icons,
     .newsletter {
-        width: 480px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-around;
+        align-items: center;
     }
+    
+    .icons,
+    .newsletter {
+        margin-top: 60px;
+    }
+
+    .newsletter__input {
+        height: 50px;
+    }
+
+}
+
+@media screen and (min-width: 480px) {
+
+    .newsletter__input {
+        @include width-height(450px, 50px);
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
-    footer {
-        padding-top: 0;
+
+    .footer__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
+
     .footer__container {
-        display: flex;
-        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .address .logo {
+        display: block;
     }
 
     .address__list {
         display: block;
-        width: 230px;
     }
 
-    .address__section {
-        @include width-height(230px);
-    }
-
-    .icons {
-        margin-left: 70px;
-    }
-
+    .icons,
     .newsletter {
-        width: 570px;
-        margin-left: 95px;
+       align-items: flex-start;
+       margin-top: 0;
     }
 
     .newsletter__form {
+        width: 570px;
         display: flex;
+        justify-content: space-between;
     }
 
     .newsletter__input {
-        @include width-height(358px, 50px);
+        width: 358px;
     }
 
-    .newsletter__button {
-        margin-left: 10px;
-    }
 }

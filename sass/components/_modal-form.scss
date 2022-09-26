@@ -1,7 +1,3 @@
-.modal-form {
-    width: 370px;
-}
-
 .modal-form__head {
     margin: 0;
     margin-bottom: 15px;
@@ -116,7 +112,22 @@
     }
 }
 
+@media screen and (min-width: 320px) {
+    
+    .modal-form {
+        width: calc(100% - 30px);
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    .modal-form {
+        width: 370px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
+
     .modal-form {
         width: 448px;
     }
