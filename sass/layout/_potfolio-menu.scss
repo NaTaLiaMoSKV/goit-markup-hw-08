@@ -11,6 +11,7 @@
     border-radius: 4px;
     border-style: none;
     background: var(--light-gray-color);
+    color: var(--main-content-color);
     transition: background-color 250ms var(--timing-function),
         color 250ms var(--timing-function),
         box-shadow 250ms var(--timing-function);

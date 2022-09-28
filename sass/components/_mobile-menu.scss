@@ -117,6 +117,12 @@
     color: var(--blue-color);
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .mobile-menu__close-container {
+        width: calc(100% - 30px);
+    }
+}
+
 @media screen and (min-width: 480px) {
     .mobile-menu__links-item {
         font-size: 18px;
